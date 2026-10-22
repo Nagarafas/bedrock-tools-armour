@@ -2,7 +2,7 @@ package net.nmc.bta;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.client.data.models.ModelProvider;
+import net.nmc.bta.datagen.ModEquipmentAssetProvider;
 import net.nmc.bta.datagen.ModModelProvider;
 
 public class BedrockToolsArmourDataGenerator implements DataGeneratorEntrypoint {
@@ -11,5 +11,6 @@ public class BedrockToolsArmourDataGenerator implements DataGeneratorEntrypoint 
 		var pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModEquipmentAssetProvider::new);
 	}
 }

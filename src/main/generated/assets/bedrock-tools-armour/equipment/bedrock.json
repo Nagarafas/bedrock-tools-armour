@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "bedrock-tools-armour:bedrock"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "bedrock-tools-armour:bedrock"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "bedrock-tools-armour:bedrock"
+      }
+    ]
+  }
+}

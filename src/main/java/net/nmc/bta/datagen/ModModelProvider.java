@@ -19,14 +19,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators){
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SWORD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_PICKAXE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_AXE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SHOVEL, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_HOE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_HELMET, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_CHESTPLATE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_LEGGINGS, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_BOOTS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_HELMET, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_CHESTPLATE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_LEGGINGS, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEDROCK_BOOTS, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }
