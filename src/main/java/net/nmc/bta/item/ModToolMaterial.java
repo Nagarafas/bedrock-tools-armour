@@ -1,5 +1,4 @@
 package net.nmc.bta.item;
-
 import net.minecraft.world.item.ToolMaterial;
 import net.nmc.bta.tags.ModTags;
 

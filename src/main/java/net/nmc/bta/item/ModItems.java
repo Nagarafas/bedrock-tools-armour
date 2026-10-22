@@ -6,8 +6,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.nmc.bta.BedrockToolsArmour;
 
 import net.minecraft.core.component.DataComponents;
@@ -34,6 +36,7 @@ public class ModItems {
                     -2.8f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
+
     public static final Item BEDROCK_AXE = registerItem("bedrock_axe", properties -> new Item(
             properties.axe(
                     ModToolMaterial.BEDROCK,
@@ -41,6 +44,7 @@ public class ModItems {
                     -3.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
+
     public static final Item BEDROCK_SHOVEL = registerItem("bedrock_shovel", properties -> new Item(
             properties.shovel(
                     ModToolMaterial.BEDROCK,
@@ -48,6 +52,7 @@ public class ModItems {
                     -3.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
+
     public static final Item BEDROCK_HOE = registerItem("bedrock_hoe", properties -> new Item(
             properties.hoe(
                     ModToolMaterial.BEDROCK,
@@ -55,10 +60,31 @@ public class ModItems {
                     0.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
-    public static final Item BEDROCK_HELMET = registerItem("bedrock_helmet", Item::new);
-    public static final Item BEDROCK_CHESTPLATE = registerItem("bedrock_chestplate", Item::new);
-    public static final Item BEDROCK_LEGGINGS = registerItem("bedrock_leggings", Item::new);
-    public static final Item BEDROCK_BOOTS = registerItem("bedrock_boots", Item::new);
+
+    public static final Item BEDROCK_HELMET = registerItem("bedrock_helmet", properties -> new Item(
+            properties.humanoidArmor(
+                    ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
+                    ArmorType.HELMET)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+    ));
+    public static final Item BEDROCK_CHESTPLATE = registerItem("bedrock_chestplate", properties -> new Item(
+            properties.humanoidArmor(
+                            ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
+                            ArmorType.CHESTPLATE)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+    ));
+    public static final Item BEDROCK_LEGGINGS = registerItem("bedrock_leggings", properties -> new Item(
+            properties.humanoidArmor(
+                            ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
+                            ArmorType.LEGGINGS)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+    ));
+    public static final Item BEDROCK_BOOTS = registerItem("bedrock_boots", properties -> new Item(
+            properties.humanoidArmor(
+                            ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
+                            ArmorType.BOOTS)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+    ));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name),
