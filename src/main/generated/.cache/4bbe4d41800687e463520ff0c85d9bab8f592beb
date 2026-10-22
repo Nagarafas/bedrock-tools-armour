@@ -1,0 +1,19 @@
+// 26.3	-999999999-01-01T00:00:00	Bedrock-Tools-Armour/Model Definitions
+56587709a14e5f509806669c408046fd93e83d40 assets/bedrock-tools-armour/items/bedrock_axe.json
+96738643e1b3491d398bf294dbd5d35b06a1153d assets/bedrock-tools-armour/items/bedrock_boots.json
+a305ca2c97e71f336ada5d865c3552350357272e assets/bedrock-tools-armour/items/bedrock_chestplate.json
+52fcd419850270a8ed745a8619af44b3f848a41d assets/bedrock-tools-armour/items/bedrock_helmet.json
+af8fb773c8053a8ffb9af5b49a07ea14431e2f54 assets/bedrock-tools-armour/items/bedrock_hoe.json
+1b833bcc8b65ce2c8490998b8e7f972a51834605 assets/bedrock-tools-armour/items/bedrock_leggings.json
+c4030fc2d2759654c08fe6fff7ed250d89dc7c61 assets/bedrock-tools-armour/items/bedrock_pickaxe.json
+2c59ef967b6f49a3b25d1d3ff7332625b742f362 assets/bedrock-tools-armour/items/bedrock_shovel.json
+9ce4b8e0daf95eef45f7d2331af8ba3ecd8d5b90 assets/bedrock-tools-armour/items/bedrock_sword.json
+7e958ca0ffba35719d577d3b9941b2794870cfd3 assets/bedrock-tools-armour/models/item/bedrock_axe.json
+3ad880b472c1e17ec0bc5fc8a6f6f4771be58120 assets/bedrock-tools-armour/models/item/bedrock_boots.json
+ca32c6ef1dc679c23d86e7f49c9830ea8f04e5e9 assets/bedrock-tools-armour/models/item/bedrock_chestplate.json
+884359bc42dc44a055fbc4da6182675af7b26772 assets/bedrock-tools-armour/models/item/bedrock_helmet.json
+56d24dc466b76e4a191a3bd1e2f502ab6282e3d3 assets/bedrock-tools-armour/models/item/bedrock_hoe.json
+17424da3166bbcb6db2dbf774016a310760fef5c assets/bedrock-tools-armour/models/item/bedrock_leggings.json
+456d38561a5ef74e121f076cce6d3cc3e9e43ce8 assets/bedrock-tools-armour/models/item/bedrock_pickaxe.json
+50eab3d9f867b93124ed6719052c9228930af31d assets/bedrock-tools-armour/models/item/bedrock_shovel.json
+e062e407c840cfdafb444d9869462a81ad5823b2 assets/bedrock-tools-armour/models/item/bedrock_sword.json
