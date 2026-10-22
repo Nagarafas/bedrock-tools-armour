@@ -6,11 +6,12 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ToolMaterial;
 import net.nmc.bta.BedrockToolsArmour;
+
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.util.Unit;
 
 import java.util.function.Function;
 
@@ -22,31 +23,37 @@ public class ModItems {
                             ModToolMaterial.BEDROCK,
                             3.0f,
                             -2.4f)
+                            .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
             ));
+
+
     public static final Item BEDROCK_PICKAXE = registerItem("bedrock_pickaxe", properties -> new Item(
             properties.pickaxe(
                     ModToolMaterial.BEDROCK,
                     1.0f,
                     -2.8f)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
     public static final Item BEDROCK_AXE = registerItem("bedrock_axe", properties -> new Item(
             properties.axe(
                     ModToolMaterial.BEDROCK,
                     5.0f,
                     -3.0f)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
     public static final Item BEDROCK_SHOVEL = registerItem("bedrock_shovel", properties -> new Item(
             properties.shovel(
                     ModToolMaterial.BEDROCK,
                     1.5f,
-                    -3.0f
-            )
+                    -3.0f)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
     public static final Item BEDROCK_HOE = registerItem("bedrock_hoe", properties -> new Item(
             properties.hoe(
                     ModToolMaterial.BEDROCK,
                     -3.0f,
                     0.0f)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
     ));
     public static final Item BEDROCK_HELMET = registerItem("bedrock_helmet", Item::new);
     public static final Item BEDROCK_CHESTPLATE = registerItem("bedrock_chestplate", Item::new);
