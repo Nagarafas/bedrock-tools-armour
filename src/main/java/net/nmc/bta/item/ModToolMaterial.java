@@ -6,9 +6,9 @@ public class ModToolMaterial {
     public static final ToolMaterial BEDROCK = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_BEDROCK_TOOL, // incorrect blocks for drops
             32, // durability
-            69.0F, // speed
-            6.0F, // attack damage bonus
-            25, // enchantment value
+            80.0F, // speed
+            8.0F, // attack damage bonus
+            30, // enchantment value
             ModTags.Items.BEDROCK_REPAIR // repair items
     );
 }
