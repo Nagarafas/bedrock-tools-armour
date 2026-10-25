@@ -22,6 +22,22 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
         tag(ModTags.Blocks.NEEDS_BEDROCK_TOOL)
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
-    }
+
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_COPPER_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("bedrock")));
+
+   }
 }
 

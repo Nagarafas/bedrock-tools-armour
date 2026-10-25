@@ -3,7 +3,8 @@
 	"package": "net.nmc.bta.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"BlockPropertiesMixin",
+		"BlockPropertiesMixin$PropertiesMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
