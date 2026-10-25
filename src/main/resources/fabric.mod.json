@@ -3,9 +3,9 @@
 	"id": "bedrock-tools-armour",
 	"version": "${version}",
 	"name": "Bedrock-Tools-Armour",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Tools and armour made from bedrock, this is the mod version of the datapack I made a long while ago.",
 	"authors": [
-		"Me!"
+		"Nagarafas_mc"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
