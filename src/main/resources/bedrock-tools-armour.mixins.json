@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"BlockPropertiesMixin",
-		"BedrockDestroyProgressMixin"
+		"BedrockDestroyProgressMixin",
+		"BedrockEnchantmentMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
