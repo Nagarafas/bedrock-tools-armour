@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "X"
+    ],
+    "key": {
+        "#": "minecraft:bedrock",
+        "X":"minecraft:end_rod"
+    },
+    "result": {
+        "id": "bedrock-tools-armour:bedrock_sword",
+        "count" : 1
+    }
+}

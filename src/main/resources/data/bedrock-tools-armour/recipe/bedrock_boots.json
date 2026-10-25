@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "# #"
+    ],
+    "key": {
+        "#": "minecraft:bedrock"
+    },
+    "result": {
+        "id": "bedrock-tools-armour:bedrock_boots",
+        "count" : 1
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#x#",
+        "xyx",
+        "#x#"
+    ],
+    "key": {
+        "#": "minecraft:crying_obsidian",
+        "x": "minecraft:netherite_scrap",
+        "y": "minecraft:gold_block"
+    },
+    "result": {
+        "id": "minecraft:bedrock",
+        "count": 1
+    }
+}
