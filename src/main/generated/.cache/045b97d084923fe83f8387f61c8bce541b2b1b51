@@ -1,0 +1,10 @@
+// 26.3	-999999999-01-01T00:00:00	Bedrock-Tools-Armour/Tags for minecraft:item
+108699df009f4225ffd08e8025ffb85f34af93e0 data/minecraft/tags/item/axes.json
+bf259de157b635acf2da0942083d16ee4a7c8bcc data/minecraft/tags/item/enchantable/chest_armor.json
+bb91ab45169666659cad1794d6568b2a045296b0 data/minecraft/tags/item/enchantable/foot_armor.json
+fff62f14614968ec86aa0e80cecc8c7b7966b3c6 data/minecraft/tags/item/enchantable/head_armor.json
+dfdde027c062cae819bd9c6eaf1a3312eac611aa data/minecraft/tags/item/enchantable/leg_armor.json
+7f82fe29e5a6195bfe7bffc815fef880983d512d data/minecraft/tags/item/hoes.json
+7a1dc4d1744726f5d09c2f6e4f990670d3eacb2b data/minecraft/tags/item/pickaxes.json
+43a5980b01706a2275009d0dafe27a4f8aaf998b data/minecraft/tags/item/shovels.json
+63893cf73c8829671726751ad917a01fc76037f7 data/minecraft/tags/item/swords.json
