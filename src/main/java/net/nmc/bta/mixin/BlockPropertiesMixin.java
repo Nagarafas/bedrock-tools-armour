@@ -43,7 +43,8 @@ public class BlockPropertiesMixin {
                 properties.overrideLootTable(Optional.of(BEDROCK_LOOT_TABLE));
 
             }
-        }else if(id.identifier().equals(Identifier.withDefaultNamespace("reinforced_deepslate"))) {
+        }
+        if(id.identifier().equals(Identifier.withDefaultNamespace("reinforced_deepslate"))) {
             BlockBehaviour.Properties properties = cir.getReturnValue()
                     .destroyTime(20.0F)
                     .requiresCorrectToolForDrops();
