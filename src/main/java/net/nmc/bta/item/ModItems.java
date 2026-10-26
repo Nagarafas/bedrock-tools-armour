@@ -6,8 +6,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.nmc.bta.BedrockToolsArmour;
 
@@ -18,6 +21,10 @@ import java.util.function.Function;
 
 public class ModItems {
 
+    private static final TagKey<DamageType> BEDROCK_IMMUNE = TagKey.create(
+            Registries.DAMAGE_TYPE,
+            Identifier.fromNamespaceAndPath("bedrock-tools-armour", "bedrock_immune"));
+
     public static final Item BEDROCK_SWORD = registerItem("bedrock_sword",
             properties -> new Item(
                     properties.sword(
@@ -25,7 +32,8 @@ public class ModItems {
                             3.0f,
                             -2.4f)
                             .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .fireResistant()
+                            .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                        context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
             ));
 
 
@@ -35,7 +43,8 @@ public class ModItems {
                     1.0f,
                     -2.8f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
     public static final Item BEDROCK_AXE = registerItem("bedrock_axe", properties -> new Item(
@@ -44,7 +53,8 @@ public class ModItems {
                     5.0f,
                     -3.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
     public static final Item BEDROCK_SHOVEL = registerItem("bedrock_shovel", properties -> new Item(
@@ -53,7 +63,8 @@ public class ModItems {
                     1.5f,
                     -3.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
     public static final Item BEDROCK_HOE = registerItem("bedrock_hoe", properties -> new Item(
@@ -62,7 +73,8 @@ public class ModItems {
                     -5.0f,
                     0.0f)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
     public static final Item BEDROCK_HELMET = registerItem("bedrock_helmet", properties -> new Item(
@@ -70,28 +82,32 @@ public class ModItems {
                     ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
                     ArmorType.HELMET)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
     public static final Item BEDROCK_CHESTPLATE = registerItem("bedrock_chestplate", properties -> new Item(
             properties.humanoidArmor(
                             ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
                             ArmorType.CHESTPLATE)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
     public static final Item BEDROCK_LEGGINGS = registerItem("bedrock_leggings", properties -> new Item(
             properties.humanoidArmor(
                             ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
                             ArmorType.LEGGINGS)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
     public static final Item BEDROCK_BOOTS = registerItem("bedrock_boots", properties -> new Item(
             properties.humanoidArmor(
                             ModArmourMaterial.BEDROCK_ARMOUR_MATERIAL,
                             ArmorType.BOOTS)
                     .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .fireResistant()
+                    .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
