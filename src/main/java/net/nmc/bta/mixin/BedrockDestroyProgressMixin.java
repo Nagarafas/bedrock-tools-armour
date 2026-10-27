@@ -19,7 +19,7 @@ public abstract class BedrockDestroyProgressMixin {
     private void onlyBedrockPickaxeBreaksBedrock(Player player, BlockGetter level, BlockPos pos,
                                                  CallbackInfoReturnable<Float> cir) {
         BlockState state = (BlockState) (Object) this;
-        if ((state.is(Blocks.BEDROCK) || state.is(Blocks.REINFORCED_DEEPSLATE)) && isInvalidPick(player)){
+        if ((state.is(Blocks.BEDROCK) || state.is(Blocks.REINFORCED_DEEPSLATE) || state.is(Blocks.END_PORTAL_FRAME)) && isInvalidPick(player)){
             cir.setReturnValue(0.0F);
         }
     }

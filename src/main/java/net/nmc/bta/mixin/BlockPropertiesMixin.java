@@ -30,11 +30,20 @@ public class BlockPropertiesMixin {
     );
 
     @Unique
+    private static final ResourceKey<LootTable> END_PORTAL_FRAME_LOOT_TABLE = ResourceKey.create(
+            Registries.LOOT_TABLE,
+            Identifier.fromNamespaceAndPath("bedrock-tools-armour", "blocks/end_portal_frame")
+    );
+
+    @Unique
     private static final boolean DATAGEN = System.getProperty("fabric-api.datagen") != null;
 
     @Inject(method = "setId", at = @At("RETURN"))
     private void makeBedrockBreakable(ResourceKey<Block> id, CallbackInfoReturnable<BlockBehaviour.Properties> cir) {
-        if (id.identifier().equals(Identifier.withDefaultNamespace("bedrock"))) {
+        boolean isBedrock = id.identifier().equals(Identifier.withDefaultNamespace("bedrock")),
+                isReinforced_deepslate = id.identifier().equals(Identifier.withDefaultNamespace("reinforced_deepslate")),
+                isEnd_portal_frame = id.identifier().equals(Identifier.withDefaultNamespace("end_portal_frame"));
+        if (isBedrock) {
             BlockBehaviour.Properties properties = cir.getReturnValue()
                     .destroyTime(25.0F)
                     .requiresCorrectToolForDrops();
@@ -44,13 +53,15 @@ public class BlockPropertiesMixin {
 
             }
         }
-        if(id.identifier().equals(Identifier.withDefaultNamespace("reinforced_deepslate"))) {
+        if(isReinforced_deepslate || isEnd_portal_frame) {
             BlockBehaviour.Properties properties = cir.getReturnValue()
                     .destroyTime(20.0F)
                     .requiresCorrectToolForDrops();
 
-            if (!DATAGEN) {
+            if (!DATAGEN && isReinforced_deepslate) {
                 properties.overrideLootTable(Optional.of(REINFORCED_DEEPSLATE_LOOT_TABLE));
+            }else {
+                properties.overrideLootTable(Optional.of(END_PORTAL_FRAME_LOOT_TABLE));
             }
         }
     }
