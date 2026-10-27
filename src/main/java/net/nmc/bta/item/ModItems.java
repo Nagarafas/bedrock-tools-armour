@@ -1,9 +1,12 @@
 package net.nmc.bta.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
@@ -11,12 +14,14 @@ import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.DamageResistant;
+import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.nmc.bta.BedrockToolsArmour;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.util.Unit;
 
+import java.util.List;
 import java.util.function.Function;
 
 public class ModItems {
@@ -24,6 +29,18 @@ public class ModItems {
     private static final TagKey<DamageType> BEDROCK_IMMUNE = TagKey.create(
             Registries.DAMAGE_TYPE,
             Identifier.fromNamespaceAndPath("bedrock-tools-armour", "bedrock_immune"));
+
+    public static final Item SHULKER_REINFORCED_NETHERITE_PICKAXE = registerItem("reinforced_pickaxe", properties -> new Item(
+            properties.pickaxe(
+                            ModToolMaterial.SHULKER,
+                            1.0f,
+                            -2.8f)
+                    .fireResistant()
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("item.bedrock-tools-armour.reinforced_pickaxe.tooltip")
+                                    .withStyle(ChatFormatting.GRAY)
+                                    .withStyle(style -> style.withItalic(false)))))
+    ));
 
     public static final Item BEDROCK_SWORD = registerItem("bedrock_sword",
             properties -> new Item(
@@ -127,6 +144,8 @@ public class ModItems {
                 context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
+    public static final Item SHULKER_UPGRADE_SMITHING_TEMPLATE = registerItem("shulker_upgrade_smithing_template", Item::new);
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM,
@@ -137,6 +156,12 @@ public class ModItems {
         BedrockToolsArmour.LOGGER.info("Registering Mod Items for " + BedrockToolsArmour.MOD_ID);
 
         // placing items in creative mode tabs
+
+        // reinforced pick
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
+            output.accept(SHULKER_REINFORCED_NETHERITE_PICKAXE);
+        });
+
         // Sword
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.accept(BEDROCK_SWORD);
@@ -188,6 +213,11 @@ public class ModItems {
         // Boots
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.accept(BEDROCK_BOOTS);
+        });
+
+        // Template
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
+            output.accept(SHULKER_UPGRADE_SMITHING_TEMPLATE);
         });
     }
 }

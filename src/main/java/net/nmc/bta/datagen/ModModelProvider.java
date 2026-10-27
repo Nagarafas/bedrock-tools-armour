@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateSpear(ModItems.BEDROCK_SPEAR);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SHULKER_REINFORCED_NETHERITE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -29,5 +30,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_CHESTPLATE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_LEGGINGS, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_BOOTS, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SHULKER_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+
+
     }
 }

@@ -22,7 +22,8 @@ public class ModItemTagsProvider  extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.SPEARS)
                 .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_spear")));
         tag(ItemTags.PICKAXES)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_pickaxe")));
+                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_pickaxe")))
+                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","reinforced_pickaxe")));
         tag(ItemTags.SHOVELS)
                 .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_shovel")));
         tag(ItemTags.HOES)

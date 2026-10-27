@@ -19,6 +19,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> BEDROCK_REPAIR = createTag( "bedrock_repair");
+        public static final TagKey<Item> SHULKER_REPAIR = createTag( "bedrock_repair");
 
         public static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name));

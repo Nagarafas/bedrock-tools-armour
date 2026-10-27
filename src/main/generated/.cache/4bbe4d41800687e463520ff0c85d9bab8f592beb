@@ -9,6 +9,8 @@ c4030fc2d2759654c08fe6fff7ed250d89dc7c61 assets/bedrock-tools-armour/items/bedro
 2c59ef967b6f49a3b25d1d3ff7332625b742f362 assets/bedrock-tools-armour/items/bedrock_shovel.json
 06be7a79caeca550567d2c616a4b02a0d97a7e66 assets/bedrock-tools-armour/items/bedrock_spear.json
 9ce4b8e0daf95eef45f7d2331af8ba3ecd8d5b90 assets/bedrock-tools-armour/items/bedrock_sword.json
+497e424a9ecb37ad8da0c33b0baae13c87b2fb82 assets/bedrock-tools-armour/items/reinforced_pickaxe.json
+0c92439844b350c413b4cb33eed6ffc73d802f5f assets/bedrock-tools-armour/items/shulker_upgrade_smithing_template.json
 91d2316da838e4466c623715469cc139cbbadff0 assets/bedrock-tools-armour/models/item/bedrock_axe.json
 ad7724559e30954127eba5040a28521392ab42f1 assets/bedrock-tools-armour/models/item/bedrock_boots.json
 32b2684c1076259914d2a12ebfd5e58ae217ee87 assets/bedrock-tools-armour/models/item/bedrock_chestplate.json
@@ -20,3 +22,5 @@ b3e8139e311a608bc5096daf3b318cbdda79705a assets/bedrock-tools-armour/models/item
 e0b74140e4a73cbac0e0cce15d740a02cad67766 assets/bedrock-tools-armour/models/item/bedrock_spear.json
 386b93c3411d7b48b3367d1c4081ce1c52f7583d assets/bedrock-tools-armour/models/item/bedrock_spear_in_hand.json
 c292b330e21a9f1c3846d9a904b73fb894a35943 assets/bedrock-tools-armour/models/item/bedrock_sword.json
+8d91f953bb7e7fe9eeddda7a940e13568a745478 assets/bedrock-tools-armour/models/item/reinforced_pickaxe.json
+90f4822839e55f58b465af5146df1fb5cc63adc4 assets/bedrock-tools-armour/models/item/shulker_upgrade_smithing_template.json

@@ -8,5 +8,8 @@
   "item.bedrock-tools-armour.bedrock_helmet": "Bedrock helmet",
   "item.bedrock-tools-armour.bedrock_chestplate": "Bedrock Chestplate",
   "item.bedrock-tools-armour.bedrock_leggings": "Bedrock Leggings",
-  "item.bedrock-tools-armour.bedrock_boots": "Bedrock Boots"
+  "item.bedrock-tools-armour.bedrock_boots": "Bedrock Boots",
+  "item.bedrock-tools-armour.shulker_upgrade_smithing_template": "Shulker Upgrade Smithing Template",
+  "item.bedrock-tools-armour.reinforced_pickaxe": "Reinforced Netherite Pickaxe",
+  "item.bedrock-tools-armour.reinforced_pickaxe.tooltip": "Durable enough to break through the worlds limits"
 }

@@ -6,7 +6,8 @@
 		"BlockPropertiesMixin",
 		"ObsidianDestroyProgressMixin",
 		"BedrockDestroyProgressMixin",
-		"BedrockEnchantmentMixin"
+		"BedrockEnchantmentMixin",
+		"ReinforcedPickDestroyProgressMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
