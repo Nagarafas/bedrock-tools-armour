@@ -9,7 +9,12 @@
   "item.bedrock-tools-armour.bedrock_chestplate": "Bedrock Chestplate",
   "item.bedrock-tools-armour.bedrock_leggings": "Bedrock Leggings",
   "item.bedrock-tools-armour.bedrock_boots": "Bedrock Boots",
-  "item.bedrock-tools-armour.shulker_upgrade_smithing_template": "Shulker Upgrade Smithing Template",
+  "item.bedrock-tools-armour.shulker_upgrade_smithing_template": "Shulker Upgrade",
   "item.bedrock-tools-armour.reinforced_pickaxe": "Reinforced Netherite Pickaxe",
-  "item.bedrock-tools-armour.reinforced_pickaxe.tooltip": "Durable enough to break through the worlds limits"
+  "item.bedrock-tools-armour.reinforced_pickaxe.tooltip": "Durable enough to break through the worlds limits",
+  "creativemodetab.bedrock-tools-armour.bta_items": "bta Items",
+  "item.bedrock-tools-armour.smithing_template.shulker_upgrade.applies_to": "Netherite Pickaxe",
+  "item.bedrock-tools-armour.smithing_template.shulker_upgrade.ingredients": "Shulker Shell",
+  "item.bedrock-tools-armour.smithing_template.shulker_upgrade.base_slot_description": "Add a netherite pickaxe",
+  "item.bedrock-tools-armour.smithing_template.shulker_upgrade.additions_slot_description": "Add a shulker shell"
 }

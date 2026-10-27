@@ -13,6 +13,7 @@ import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -38,7 +39,7 @@ public class ModItems {
                     .fireResistant()
                     .component(DataComponents.LORE, new ItemLore(List.of(
                             Component.translatable("item.bedrock-tools-armour.reinforced_pickaxe.tooltip")
-                                    .withStyle(ChatFormatting.BLACK)
+                                    .withStyle(ChatFormatting.DARK_AQUA)
                                     .withStyle(style -> style.withItalic(false)))))
     ));
 
@@ -52,6 +53,7 @@ public class ModItems {
                             .delayedComponent(DataComponents.DAMAGE_RESISTANT,
                         context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
             ));
+
     public static final Item BEDROCK_SPEAR = registerItem("bedrock_spear",
             properties -> new Item(
                     properties.spear(
@@ -69,7 +71,6 @@ public class ModItems {
                             .delayedComponent(DataComponents.DAMAGE_RESISTANT,
                             context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
             ));
-
 
     public static final Item BEDROCK_PICKAXE = registerItem("bedrock_pickaxe", properties -> new Item(
             properties.pickaxe(
@@ -144,7 +145,15 @@ public class ModItems {
                 context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
     ));
 
-    public static final Item SHULKER_UPGRADE_SMITHING_TEMPLATE = registerItem("shulker_upgrade_smithing_template", Item::new);
+    public static final Item SHULKER_UPGRADE_SMITHING_TEMPLATE = registerItem("shulker_upgrade_smithing_template",
+            properties -> new SmithingTemplateItem(
+                    Component.translatable("item.bedrock-tools-armour.smithing_template.shulker_upgrade.applies_to").withStyle(ChatFormatting.BLUE),
+                    Component.translatable("item.bedrock-tools-armour.smithing_template.shulker_upgrade.ingredients").withStyle(ChatFormatting.BLUE),
+                    Component.translatable("item.bedrock-tools-armour.smithing_template.shulker_upgrade.base_slot_description"),
+                    Component.translatable("item.bedrock-tools-armour.smithing_template.shulker_upgrade.additions_slot_description"),
+                    List.of(Identifier.withDefaultNamespace("container/slot/pickaxe")),
+                    List.of(Identifier.withDefaultNamespace("container/slot/ingot")),
+                    properties));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name),
