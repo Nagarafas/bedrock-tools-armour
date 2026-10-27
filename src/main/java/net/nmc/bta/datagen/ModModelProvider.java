@@ -20,6 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators){
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateSpear(ModItems.BEDROCK_SPEAR);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BEDROCK_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);

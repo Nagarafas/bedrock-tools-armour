@@ -35,6 +35,23 @@ public class ModItems {
                             .delayedComponent(DataComponents.DAMAGE_RESISTANT,
                         context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
             ));
+    public static final Item BEDROCK_SPEAR = registerItem("bedrock_spear",
+            properties -> new Item(
+                    properties.spear(
+                                    ModToolMaterial.BEDROCK,
+                                    1.35f,
+                                    1.40f,
+                                    0.30f,
+                                    2.5f,
+                                    6.0f,
+                                    4.0f,
+                                    5.1f,
+                                    7.5f,
+                                    4.6f)
+                            .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                            .delayedComponent(DataComponents.DAMAGE_RESISTANT,
+                            context -> new DamageResistant(context.getOrThrow(BEDROCK_IMMUNE)))
+            ));
 
 
     public static final Item BEDROCK_PICKAXE = registerItem("bedrock_pickaxe", properties -> new Item(
@@ -120,9 +137,14 @@ public class ModItems {
         BedrockToolsArmour.LOGGER.info("Registering Mod Items for " + BedrockToolsArmour.MOD_ID);
 
         // placing items in creative mode tabs
-        // sword
+        // Sword
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.accept(BEDROCK_SWORD);
+        });
+
+        // Spear
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
+            output.accept(BEDROCK_SPEAR);
         });
 
         // Pickaxe

@@ -19,6 +19,8 @@ public class ModItemTagsProvider  extends FabricTagsProvider.ItemTagsProvider {
     protected void addTags(HolderLookup.Provider registries){
         tag(ItemTags.SWORDS)
                 .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_sword")));
+        tag(ItemTags.SPEARS)
+                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_spear")));
         tag(ItemTags.PICKAXES)
                 .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_pickaxe")));
         tag(ItemTags.SHOVELS)
