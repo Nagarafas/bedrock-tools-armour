@@ -6,13 +6,13 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -38,7 +38,7 @@ public class ModItems {
                     .fireResistant()
                     .component(DataComponents.LORE, new ItemLore(List.of(
                             Component.translatable("item.bedrock-tools-armour.reinforced_pickaxe.tooltip")
-                                    .withStyle(ChatFormatting.GRAY)
+                                    .withStyle(ChatFormatting.BLACK)
                                     .withStyle(style -> style.withItalic(false)))))
     ));
 
@@ -148,7 +148,7 @@ public class ModItems {
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name),
-                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM,
+                function.apply(new Item.Properties().rarity(Rarity.EPIC).setId(ResourceKey.create(Registries.ITEM,
                         Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name)))));
     }
 
