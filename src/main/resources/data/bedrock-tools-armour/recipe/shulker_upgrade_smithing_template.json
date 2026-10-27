@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#Y#",
+        "#X#",
+        "###"
+    ],
+    "key": {
+        "#": "minecraft:diamond",
+        "X": "minecraft:purpur_block",
+        "Y": "bedrock-tools-armour:shulker_upgrade_smithing_template"
+    },
+    "result": {
+        "id": "bedrock-tools-armour:shulker_upgrade_smithing_template",
+        "count" : 2
+    }
+}

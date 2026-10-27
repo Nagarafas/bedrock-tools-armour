@@ -29,7 +29,6 @@ public class ModCreativeModeTabs{
                         output.accept(ModItems.BEDROCK_CHESTPLATE);
                         output.accept(ModItems.BEDROCK_LEGGINGS);
                         output.accept(ModItems.BEDROCK_BOOTS);
-
                     })
                     .build());
 
