@@ -1,6 +1,7 @@
 package net.nmc.bta.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,13 +11,12 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.SmithingTemplateItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.level.block.Blocks;
 import net.nmc.bta.BedrockToolsArmour;
 
 import net.minecraft.core.component.DataComponents;
@@ -164,6 +164,15 @@ public class ModItems {
     public static void registerModItems(){
         BedrockToolsArmour.LOGGER.info("Registering Mod Items for " + BedrockToolsArmour.MOD_ID);
 
+        PlayerBlockBreakEvents.AFTER.register((level, player, pos, state, blockEntity) -> {
+            if (!state.is(Blocks.BEDROCK)) return;
+
+            ItemStack stack = player.getMainHandItem();
+            if (stack.is(SHULKER_REINFORCED_NETHERITE_PICKAXE)) {
+                // vanilla already took 1 durability, so 249 more makes 250 per bedrock block
+                stack.hurtAndBreak(255, player, EquipmentSlot.MAINHAND);
+            }
+        });
         // placing items in creative mode tabs
 
         // reinforced pick
