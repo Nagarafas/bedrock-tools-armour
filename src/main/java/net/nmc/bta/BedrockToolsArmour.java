@@ -2,10 +2,12 @@ package net.nmc.bta;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.resources.Identifier;
 
 import net.nmc.bta.creativemodetab.ModCreativeModeTabs;
 import net.nmc.bta.item.ModItems;
+import net.nmc.bta.loot.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +27,7 @@ public class BedrockToolsArmour implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 
 		ModItems.registerModItems();
+		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
 	}
 
 	public static Identifier id(String path) {
