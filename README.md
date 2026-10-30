@@ -1,9 +1,2 @@
-# Bedrock-Tools-Armour
-
-## Setup
-
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+# Bedrock-Tools-Armour fabric mod
+The Mod version of my datapack that's listed in planet-minecraft
