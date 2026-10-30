@@ -3,15 +3,15 @@
 	"id": "bedrock-tools-armour",
 	"version": "${version}",
 	"name": "Bedrock-Tools-Armour",
-	"description": "Tools and armour made from bedrock, this is the mod version of the datapack I made a long while ago.",
+	"description": "Armour and Tools made from Bedrock.\nThey are unbreakable and the pickaxe can break deepslate instantly when enchanted with efficiency",
 	"authors": [
 		"Nagarafas_mc"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/bedrock-tools-armour",
+		"sources": "https://github.com/Nagarafas/bedrock-tools-armour"
 	},
-	"license": "CC0-1.0",
+	"license": "AGPL-3.0-only",
 	"icon": "assets/bedrock-tools-armour/icon.png",
 	"environment": "*",
 	"entrypoints": {
