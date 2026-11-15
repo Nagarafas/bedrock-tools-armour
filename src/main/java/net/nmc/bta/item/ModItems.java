@@ -155,6 +155,10 @@ public class ModItems {
                     List.of(Identifier.withDefaultNamespace("container/slot/ingot")),
                     properties));
 
+    public static ResourceKey<Item> getRK(Item item){
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BedrockToolsArmour.MOD_ID, name),
                 function.apply(new Item.Properties().rarity(Rarity.EPIC).setId(ResourceKey.create(Registries.ITEM,

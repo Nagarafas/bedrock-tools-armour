@@ -7,8 +7,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
+import net.nmc.bta.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
+
+import static net.nmc.bta.item.ModItems.getRK;
 
 public class ModItemTagsProvider  extends FabricTagsProvider.ItemTagsProvider {
     public ModItemTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture){
@@ -17,27 +20,18 @@ public class ModItemTagsProvider  extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries){
-        tag(ItemTags.SWORDS)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_sword")));
-        tag(ItemTags.SPEARS)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_spear")));
+        tag(ItemTags.SWORDS).add(getRK(ModItems.BEDROCK_SWORD));
+        tag(ItemTags.SPEARS).add(getRK(ModItems.BEDROCK_SPEAR));
         tag(ItemTags.PICKAXES)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_pickaxe")))
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","reinforced_pickaxe")));
-        tag(ItemTags.SHOVELS)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_shovel")));
-        tag(ItemTags.HOES)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_hoe")));
-        tag(ItemTags.AXES)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_axe")));
-        tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_helmet")));
-        tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_chestplate")));
-        tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_leggings")));
-        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
-                .add(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("bedrock-tools-armour","bedrock_boots")));
+                .add(getRK(ModItems.BEDROCK_PICKAXE))
+                .add(getRK(ModItems.SHULKER_REINFORCED_NETHERITE_PICKAXE));
+        tag(ItemTags.SHOVELS).add(getRK(ModItems.BEDROCK_SHOVEL));
+        tag(ItemTags.HOES).add(getRK(ModItems.BEDROCK_HOE));
+        tag(ItemTags.AXES).add(getRK(ModItems.BEDROCK_AXE));
+        tag(ItemTags.HEAD_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_HELMET));
+        tag(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_CHESTPLATE));
+        tag(ItemTags.LEG_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_LEGGINGS));
+        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_BOOTS));
     }
 
 }
