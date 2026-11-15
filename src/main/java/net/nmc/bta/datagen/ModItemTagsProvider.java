@@ -32,6 +32,11 @@ public class ModItemTagsProvider  extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_CHESTPLATE));
         tag(ItemTags.LEG_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_LEGGINGS));
         tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(getRK(ModItems.BEDROCK_BOOTS));
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(getRK(ModItems.BEDROCK_HELMET))
+                .add(getRK(ModItems.BEDROCK_CHESTPLATE))
+                .add(getRK(ModItems.BEDROCK_LEGGINGS))
+                .add(getRK(ModItems.BEDROCK_BOOTS));
     }
 
 }
