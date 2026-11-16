@@ -18,10 +18,10 @@ public class ModArmourMaterial {
 
     public static final ArmorMaterial BEDROCK_ARMOUR_MATERIAL = new ArmorMaterial(
             32,
-            ArmorMaterials.makeDefense(4, 7, 9, 4, 25),
+            ArmorMaterials.makeDefense(6, 12, 16, 6, 40),
             25,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
-            8.0f,
+            10.0f,
             1.0f,
             ModTags.Items.BEDROCK_REPAIR,
             BEDROCK_KEY
