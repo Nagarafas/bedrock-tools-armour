@@ -8,7 +8,8 @@
 		"BedrockDestroyProgressMixin",
 		"BedrockEnchantmentMixin",
 		"ReinforcedPickDestroyProgressMixin",
-		"AnvilCombineFixMixin"
+		"AnvilCombineFixMixin",
+		"BedrockDropFix"
 	],
 	"injectors": {
 		"defaultRequire": 1
